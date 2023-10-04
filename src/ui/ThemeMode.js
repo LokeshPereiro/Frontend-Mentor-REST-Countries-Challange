@@ -1,17 +1,15 @@
 export const light = {
-  element: "#fff",
-  bg: "#fafafa",
-  text: "#202D36",
-  shadow: "rgba(31, 32, 37, 0.3)",
-  shadow2: " rgba(0, 0, 0, 0.1)",
-  neutralText: "#727272",
+  element: "hsl(0, 0%, 100%)",
+  bg: "hsl(0, 0%, 98%)",
+  text: "hsl(200, 15%, 8%)",
+  text2: "#CE7777",
+  shadow: "#dfd5d5",
 };
 
 export const dark = {
-  element: "#2B3743",
-  bg: "#202D36",
-  text: "#EBEFF3",
+  element: "hsl(209, 23%, 22%)",
+  bg: "hsl(207, 26%, 17%)",
+  text: "#fff",
+  text2: "#CE5959",
   shadow: "#16222bf0",
-  shadow2: " rgba(0, 0, 0, 0.23)",
-  neutralText: "#c3c3c3",
 };

@@ -15,7 +15,6 @@ export const CountryDetailsStyles = styled.article`
   }
 
   .details {
-    /* flex: ; */
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -45,10 +44,11 @@ export const CountryDetailsStyles = styled.article`
     &__name {
       font-weight: bold;
       margin-right: 5px;
+      color: var(--text);
     }
 
     &__item {
-      color: var(--neutralText);
+      color: var(--text2);
     }
 
     span {
@@ -57,10 +57,10 @@ export const CountryDetailsStyles = styled.article`
   }
 
   .border {
-    width: 65%;
     display: grid;
+    border: none !important;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 0.5rem;
     /* grid-template-rows:  */
 
     @media screen and (max-width: 37.5em) {

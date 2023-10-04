@@ -1,5 +1,5 @@
 import axios from "axios";
 
-export default axios.create({
+export const baseURL = axios.create({
   baseURL: "https://restcountries.com/v2",
 });

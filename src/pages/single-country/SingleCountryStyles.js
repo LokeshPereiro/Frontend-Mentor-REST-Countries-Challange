@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const SingleCountryStyles = styled(Link)`
   .country {
-    box-shadow: 0 2rem 5rem 1rem var(--shadow2);
+    box-shadow: 0 2rem 5rem 1rem var(--shadow);
     font-size: 1.6rem;
     border-radius: 0.7rem;
     background-color: var(--element);
@@ -32,7 +32,7 @@ export const SingleCountryStyles = styled(Link)`
     }
 
     &_item {
-      color: var(--neutralText);
+      color: var(--text2);
     }
   }
 

@@ -14,9 +14,9 @@ export const Header = () => {
     <HeaderStyles>
       <div className="container header__container">
         <Link to="/">
-          <h1>Where in the world?</h1>
+          <h1>Where you from?</h1>
         </Link>
-        <button className="btn header__btn" onClick={handleMode}>
+        <button className="btn header__btn " onClick={handleMode}>
           {!darkMode ? (
             <i className="fa-solid fa-moon"> Dark Mode</i>
           ) : (

@@ -1,11 +1,10 @@
-import { useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { getSingleCountry } from "../../redux/slices/countriesSlice/thunk";
-import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { CountryDetailsStyles } from "./CountryDetailsStyles";
 
 export const CountryDetails = () => {
   const { country } = useSelector((state) => state.countries);
+
   const {
     name,
     flags,
@@ -19,32 +18,15 @@ export const CountryDetails = () => {
     borders,
   } = country;
 
-  const dispatch = useDispatch();
-
-  const navigate = useNavigate();
-
-  const onNavBack = () => {
-    navigate(-1);
-  };
-  const { countryCode } = useParams();
-
-  useEffect(() => {
-    dispatch(getSingleCountry(countryCode));
-  }, [countryCode]);
-
   return (
     <CountryDetailsStyles>
-      <button className="btn m-2 btn-outline-primary" onClick={onNavBack}>
-        Go Back
-      </button>
-
       <div className="selectCountry__container">
         <div className="image">
           <img src={flags?.svg} alt="flag" />
         </div>
 
         <div className="details">
-          <h2>{name}</h2>
+          <h2 className="data__name">{name}</h2>
           <div className="data">
             <div className="data__left">
               <div className="data__row">
@@ -86,7 +68,7 @@ export const CountryDetails = () => {
             </div>
           </div>
           <div className="borders">
-            <h4>Border countries</h4>
+            <h4 className="data__name">Border countries</h4>
             <div className="border">
               {borders?.map((bor) => (
                 <Link key={bor} to={`/countries/${bor}`}>

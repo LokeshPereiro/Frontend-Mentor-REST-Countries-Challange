@@ -26,13 +26,15 @@ export const SearchCountriesStyles = styled.form`
     border: none;
     padding: 1rem 0;
     border: none;
-
     font-family: inherit;
     background-color: transparent;
 
     &::placeholder {
-      color: var(--neutralText);
+      color: var(--text);
     }
+  }
+  .text-white {
+    color: var(--text);
   }
 
   input:focus {

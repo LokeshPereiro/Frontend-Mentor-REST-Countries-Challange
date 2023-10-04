@@ -5,7 +5,7 @@ import { FilteringInputsStyles } from "./FilteringInputsStyles";
 export const FilteringInputs = () => {
   return (
     <FilteringInputsStyles>
-      <div className="container forms_container">
+      <div className="container forms__container">
         <SearchCountries />
         <FilteredCountries />
       </div>

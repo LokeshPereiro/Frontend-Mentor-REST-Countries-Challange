@@ -24,9 +24,9 @@ export const countriesSlice = createSlice({
     setDarkLightMode: (state) => {
       state.darkMode = !state.darkMode;
     },
-    // clearFilters: (state) => {
-    //   state.isFiltered = null;
-    // },
+    clearFilters: (state) => {
+      state.isFiltered = null;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(getAllCountries.pending, (state) => {
@@ -56,5 +56,5 @@ export const countriesSlice = createSlice({
   },
 });
 
-export const { setFilteredCountries, setDarkLightMode } =
+export const { setFilteredCountries, setDarkLightMode, clearFilters } =
   countriesSlice.actions;

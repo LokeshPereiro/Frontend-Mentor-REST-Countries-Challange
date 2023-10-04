@@ -8,16 +8,11 @@ export const FilterCountriesStyles = styled.div`
   font-size: 1.6rem;
   background-color: var(--element);
   color: var(--text);
-  /* transition: color 0.3s ease-in-out; */
 
   display: flex;
   align-items: center;
   cursor: pointer;
   position: relative;
-
-  &:focus-within {
-    box-shadow: 0 1px 6px 0 var(--shadow);
-  }
 
   select {
     appearance: none;
@@ -32,12 +27,13 @@ export const FilterCountriesStyles = styled.div`
     line-height: inherit;
 
     padding: 1rem;
-    /* border: 1px solid black; */
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   option {
     padding: 1rem;
-    /* border: 1px solid black; */
   }
 
   @media screen and (max-width: 37.5em) {

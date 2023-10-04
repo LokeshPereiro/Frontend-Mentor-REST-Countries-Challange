@@ -1,17 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import baseURL from "../../../api/restCountriesApi";
-
-//TODO -> Api call without createAsyncThunk
-// import { setApiCountries, startLoadingCountries } from "./countriesSlice";
-// export const getAllCountries = () => {
-//   return async (dispatch, getState) => {
-//     dispatch(startLoadingCountries());
-
-//       const { data } = await baseURL.get("/all");
-//       dispatch(setApiCountries(data));
-
-//   };
-// };
+import { baseURL } from "../../../api";
 
 export const getAllCountries = createAsyncThunk(
   "countries/getAllCountries",

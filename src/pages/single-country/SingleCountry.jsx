@@ -1,10 +1,8 @@
-import { Link } from "react-router-dom";
 import { SingleCountryStyles } from "./SingleCountryStyles";
 
 export const SingleCountry = ({ country }) => {
   // console.log(country);
-  const { name, official, flags, region, population, capital, alpha3Code } =
-    country;
+  const { name, flags, region, population, capital, alpha3Code } = country;
 
   return (
     <SingleCountryStyles to={`/countries/${alpha3Code}`}>

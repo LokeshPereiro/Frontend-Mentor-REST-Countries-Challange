@@ -1,6 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+:root {
+  /* Dynamic Theme Mode */
+  --bg:  ${({ theme }) => theme.bg}; 
+  --text:  ${({ theme }) => theme.text};
+  --text2:  ${({ theme }) => theme.text2};
+  --element: ${({ theme }) => theme.element};
+  --shadow: ${({ theme }) => theme.shadow};
+}
 
 *,
 *::after,
@@ -8,14 +16,13 @@ export const GlobalStyles = createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  color: var(--text);
 }
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
 
-   @media screen and (max-width: 37.5em) {
+   @media screen and (max-width: 37.5rem) {
      font-size: 58%;
     }
   
@@ -30,8 +37,7 @@ body {
 .container{
     max-width: 120rem;
     margin: 0 auto;
-     padding: 3rem;
-
+    padding: 3rem;
 }
 
 a {
@@ -42,8 +48,8 @@ a {
 
 img{
 	width: 100%;
-	height: 100%;
-	  object-fit: cover;
+  height: 100%;
+  object-fit: cover;
 }
 
 button{
@@ -57,9 +63,14 @@ button{
   box-shadow: 0 1px 6px 0 var(--shadow);
   background-color: var(--element);
   font-size: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color:var(--text);
+   transition: all 0.4s ease-in-out;
 
-  &:focus{
-    box-shadow: 0 1px 6px 0 var(--shadow);
-  }
+    &:hover {
+      transform: scale(.95);
+    }
 }
 `;
